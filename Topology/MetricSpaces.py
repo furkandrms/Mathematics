@@ -44,6 +44,8 @@ class MetricSpace:
     
     def d5(self, point1, point2):
         return min(1, self.euclidean_distance(point1, point2))
+    
+    
 
     
 
