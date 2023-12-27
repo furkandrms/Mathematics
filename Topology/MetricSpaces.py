@@ -29,4 +29,23 @@ class MetricSpace:
             for j in range(n): 
                 mat[i, j] = self.euclidean_distance(self.points[i], self.points[j])
         return mat
+    
+    def d1(self, point1, point2): 
+        return np.abs((point1 - point2)**2)
+    
+    def d2(self, point1, point2): 
+        return 0 if point1 == point2 else (1 / (1 + min(point1, point2)))
+    
+    def d3(self, point1, point2): 
+        return np.abs((point1**2) - (point2**2))
+    
+    def d4(self, point1, point2): 
+        return np.log(1 + self.euclidean_distance(point1,point2))
+    
+    def d5(self, point1, point2):
+        return min(1, self.euclidean_distance(point1, point2))
+
+    
+
+
 
